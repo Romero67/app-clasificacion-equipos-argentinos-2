@@ -31,7 +31,6 @@ mongoose.connect('mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.
  useUnifiedTopology: true
 }).then(() => console.log('connect to database success'));
 
-getTeams();
 
 //routes setup
 app.get('/', require('./routes/index.routes'));

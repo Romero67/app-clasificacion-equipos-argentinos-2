@@ -4,11 +4,11 @@ const config = require('./config');
 
 const agenda = new Agenda({ db: { address: config.DATABASE_AGENDA } });
 
-// agenda.define('sendGetTeams', function(job) {
- 
-// });
+agenda.define('sendGetTeams', function(job) {
+ getTeams();
+});
 
-// agenda.on('ready', function() {
-//  agenda.every(config.TIME_GET_TEAMS, 'sendGetTeams');
-//  agenda.start(); 
-// });
+agenda.on('ready', function() {
+ agenda.every(config.TIME_GET_TEAMS, 'sendGetTeams');
+ agenda.start(); 
+});
