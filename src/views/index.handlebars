@@ -1,0 +1,42 @@
+<div class="container">
+      <h1 class="title">Equipos Argentinos</h1>
+      <h2>Posicionamiento actual de los equipos argentinos primera division</h2>
+      <table class="table">
+        <thead class="thead">
+          <tr>
+            <th>Pos</th>
+            <th>Equipo</th>
+            <th>Pj</th>
+            <th>G</th>
+            <th class="visible2">E</th>
+            <th class="visible2">P</th>
+            <th class="visible">GF</th>
+            <th class="visible">GC</th>
+            <th class="visible">DG</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+         {{#each teams}}
+          <tr class=''>
+            <td class="featured column-pos">{{pos}}</td>
+            <td class="textAlignLeft {{#if asc}}asc{{/if}} {{#if desc}}desc{{/if}}">
+             <div class="container-name">
+              <img src="{{url}}" alt="{{name}}" title="{{name}}">
+              <span class="name">{{name}}</span>
+              <span class="short_name">{{short_name}}</span>
+              </div>
+             </td>
+            <td class="featured column-30">{{pj}}</td>
+            <td class="column-30">{{g}}</td>
+            <td class="visible2">{{e}}</td>
+            <td class="visible2">{{p}}</td>
+            <td class="visible">{{gf}}</td>
+            <td class="visible">{{gc}}</td>
+            <td class="visible">{{dg}}</td>
+            <td class="featured column-30">{{pts}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
