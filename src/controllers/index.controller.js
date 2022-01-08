@@ -5,10 +5,10 @@ exports.renderIndex = async(req, res) => {
  .lean();
 
  const teams = teamsFind.map((e,i) => {
-  if(i<4){
+  if(e.pos<4){
    e.asc = true;
    e.desc = false;
-  }else if(i>21){
+  }else if(e.pos>21){
    e.asc = false;
    e.desc = true;
   }
