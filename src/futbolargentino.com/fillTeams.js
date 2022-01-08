@@ -34,7 +34,7 @@ exports.fillTeams = async(data, names, images) => {
 
   const newTeam = new Team(team);
 
-  newTeam.save((err, data) => {
+  await newTeam.save((err, data) => {
    if(err){
     throw new Exception('An error ocurried while saving the teams')
    }

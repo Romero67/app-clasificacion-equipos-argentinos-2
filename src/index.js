@@ -29,7 +29,8 @@ app.set('views', path.join(__dirname, 'views'));
 mongoose.connect('mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
  useNewUrlParser: true,
  useUnifiedTopology: true
-}).then(() => console.log('connect to database success'));
+}).then(() => console.log('connect to database success'))
+.catch(() => 'ERROR TO DATABASE');
 
 
 //routes setup
