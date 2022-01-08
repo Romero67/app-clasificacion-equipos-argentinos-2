@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const {engine} = require('express-handlebars');
 const config = require('./config');
+const { getTeams } = require('./futbolargentino.com/main');
 
 
 
@@ -24,11 +25,13 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 
-//connect to database
+//connect to database process.env.MONGODB_ATLAS
 mongoose.connect(process.env.MONGODB_ATLAS,{
  useNewUrlParser: true,
  useUnifiedTopology: true
 }).then(() => console.log('connect to database success'));
+
+getTeams();
 
 //routes setup
 app.get('/', require('./routes/index.routes'));
