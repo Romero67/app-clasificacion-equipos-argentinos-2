@@ -3,12 +3,11 @@ const Team = require('../models/team.model');
 
 exports.fillTeams = async(data, names, images) => {
 
- // const count = await Team.estimatedDocumentCount();
+ const count = await Team.estimatedDocumentCount();
  
- // if(count > 0){
- //  await Team.deleteMany({ })  
- // }
- await Team.deleteMany({ })  
+ if(count > 0){
+  await Team.deleteMany({ })  
+ }
 
  var numberName = 0;
  var numberImage = 0;
