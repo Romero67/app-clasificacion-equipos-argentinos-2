@@ -17,7 +17,8 @@ exports.renderIndex = async(req, res) => {
    e.desc = false;
   }
   return e;
- })
+ }).sort(function(a, b){return a.pos - b.pos});
+
  res.render('index', {teams})
 
 }
