@@ -8,7 +8,7 @@ const configurations = {
     process.env.MONGODB_DATABASE || "dbTest"
   }`,
   DATABASE_AGENDA: process.env.DATABASE_AGENDA || 'mongodb://localhost/testAgenda',
-  TIME_GET_TEAMS: '1 days'
+  TIME_GET_TEAMS: '20 seconds'
 };
 
 module.exports = configurations;

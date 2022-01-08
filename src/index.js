@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 //connect to database
-mongoose.connect(config.MONGODB_URI,{
+mongoose.connect(process.env.MONGODB_ATLAS,{
  useNewUrlParser: true,
  useUnifiedTopology: true
 }).then(() => console.log('connect to database success'));
