@@ -4,6 +4,7 @@ const axios = require("axios");
 const { fillTeams } = require("./fillTeams");
 
 exports.getTeams = () => {
+
   const data = [];
   const names = [];
   const images = [];
@@ -28,5 +29,4 @@ exports.getTeams = () => {
       }
     })
     .catch((err) => console.log(err));
-  console.log("teams loaded");
 };

@@ -1,4 +1,5 @@
 <div class="container">
+  
       <h1 class="title">Equipos Argentinos</h1>
       <h2>Posicionamiento actual de los equipos argentinos primera division</h2>
       <table class="table">
@@ -20,7 +21,7 @@
          {{#each teams}}
           <tr class=''>
             <td class="featured column-pos">{{pos}}</td>
-            <td class="textAlignLeft {{#if asc}}asc{{/if}} {{#if desc}}desc{{/if}}">
+            <td class="textAlignLeft {{#isAsc pos}}asc{{/isAsc}}{{#isDesc pos}}desc{{/isDesc}}">
              <div class="container-name">
               <img src="{{url}}" alt="{{name}}" title="{{name}}">
               <span class="name">{{name}}</span>
@@ -34,7 +35,7 @@
             <td class="visible">{{gf}}</td>
             <td class="visible">{{gc}}</td>
             <td class="visible">{{dg}}</td>
-            <td class="featured column-30">{{pts}}</td>
+            <td class="featured column-30">{{this.pts}}</td>
           </tr>
           {{/each}}
         </tbody>

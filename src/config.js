@@ -7,8 +7,7 @@ const configurations = {
   MONGODB_URI: `mongodb://${process.env.MONGODB_HOST || "localhost"}/${
     process.env.MONGODB_DATABASE || "dbTest"
   }`,
-  DATABASE_AGENDA: process.env.DATABASE_AGENDA || 'mongodb://localhost/testAgenda',
-  TIME_GET_TEAMS: '20 seconds'
+  TIME_GET_TEAMS: 10000 //10 segundos, expresado en milisegundos
 };
 
 module.exports = configurations;
