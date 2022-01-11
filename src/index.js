@@ -44,7 +44,7 @@ setInterval(getTeams, config.TIME_GET_TEAMS);
 
 
 //connect to database 
-mongoose.connect(process.env.DATABASE_MONGO,{
+mongoose.connect(config.MONGODB_URI,{
  useNewUrlParser: true,
  useUnifiedTopology: true
 }).then(() => console.log('connect to database success'))
