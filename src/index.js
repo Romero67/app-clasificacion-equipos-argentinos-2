@@ -39,10 +39,6 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-//get info of futbolargentino.com, 20 sec
-setInterval(getTeams, config.TIME_GET_TEAMS);
-
-
 //connect to database 
 mongoose.connect(config.MONGODB_URI,{
  useNewUrlParser: true,
@@ -50,6 +46,8 @@ mongoose.connect(config.MONGODB_URI,{
 }).then(() => console.log('connect to database success'))
 .catch(() => 'ERROR TO DATABASE');
 
+//get info of futbolargentino.com, 20 sec
+setInterval(getTeams, config.TIME_GET_TEAMS);
 
 //routes setup
 app.get('/', (req, res) => {
