@@ -45,7 +45,7 @@ setInterval(getTeams, config.TIME_GET_TEAMS);
 
 //connect to database 
 console.log(process.env.DATABASE_MONGO)
-mongoose.connect('mongodb+srv://motorkai:U4DfQrg32h3sX!i@cluster0.fredy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+mongoose.connect(process.env.DATABASE_MONGO,{
  useNewUrlParser: true,
  useUnifiedTopology: true
 }).then(() => console.log('connect to database success'))
