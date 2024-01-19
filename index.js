@@ -4,9 +4,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
 const {engine, create} = require('express-handlebars');
-const config = require('./config');
-const { getTeams } = require('./futbolargentino.com/main');
-const Team = require('./models/team.model')
+const config = require('./src/config');
+const { getTeams } = require('./src/futbolargentino.com/main');
+const Team = require('./src/models/team.model')
 
 
 //use the libs
