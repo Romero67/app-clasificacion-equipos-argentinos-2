@@ -47,6 +47,7 @@ mongoose.connect(config.MONGODB_URI,{
 .catch(() => 'ERROR TO DATABASE');
 
 //get info of futbolargentino.com, 20 sec
+getTeams()
 setInterval(getTeams, config.TIME_GET_TEAMS);
 
 //routes setup
