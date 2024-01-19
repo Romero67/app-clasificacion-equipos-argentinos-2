@@ -37,7 +37,7 @@ const hbs = create({
 //setting handlebars
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'src/views'));
 
 //connect to database 
 mongoose.connect(config.MONGODB_URI,{
@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 });
 
 //static files
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "src/public")));
 
 //listen to port
 app.listen(config.PORT, () => console.log(`server on port ${config.PORT}`));
